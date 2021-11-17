@@ -47,4 +47,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      run: echo This is where a deploy would happen
+    - run: echo This is where a deploy would happen

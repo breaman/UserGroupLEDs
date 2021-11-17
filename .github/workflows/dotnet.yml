@@ -23,3 +23,28 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+    - name: Deploy yarp
+      run: dotnet publish ./src/RaspberryPi.Yarp -r linux-arm64 -p:PublishTrimmed=true --self-contained -o ./deploy/yarp
+    - name: Deploy alexa
+      run: dotnet publish ./src/UserGroupLEDs.Alexa -r linux-arm64 -p:PublishTrimmed=true --self-contained -o ./deploy/alexa
+    - name: Deploy web
+      run: dotnet publish ./src/UserGroupLEDs.Web -r linux-arm64 -p:PublishTrimmed=true --self-contained -o ./deploy/web
+
+  release:
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - run: echo This is where a deploy would happen

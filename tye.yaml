@@ -1,0 +1,14 @@
+# tye application configuration file
+# read all about it at https://github.com/dotnet/tye
+#
+# when you've given us a try, we'd love to know what you think:
+#    https://aka.ms/AA7q20u
+#
+name: usergroupleds
+services:
+- name: usergroupleds-web
+  project: src/UserGroupLEDs.Web/UserGroupLEDs.Web.csproj
+- name: raspberrypi-yarp
+  project: src/RaspberryPi.Yarp/RaspberryPi.Yarp.csproj
+- name: usergroupleds-alexa
+  project: src/UserGroupLEDs.Alexa/UserGroupLEDs.Alexa.csproj

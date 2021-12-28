@@ -28,7 +28,8 @@
         "formulahendry.auto-complete-tag",
         "adrianwilczynski.alpine-js-intellisense",
 		"heybourn.headwind",
-		"tintoy.msbuild-project-tools"
+		"tintoy.msbuild-project-tools",
+		"ms-azuretools.vscode-tye"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

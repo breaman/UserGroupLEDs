@@ -29,7 +29,8 @@
         "adrianwilczynski.alpine-js-intellisense",
 		"heybourn.headwind",
 		"tintoy.msbuild-project-tools",
-		"ms-azuretools.vscode-tye"
+		"ms-azuretools.vscode-tye",
+		"ms-dotnettools.blazorwasm-companion"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

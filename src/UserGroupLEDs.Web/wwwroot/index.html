@@ -20,6 +20,15 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        window.returnArrayAsync = () => {
+          DotNet.invokeMethodAsync('UserGroupLEDs.Web', 'ReturnArrayAsync')
+            .then(data => {
+              console.log('Stokes was here');
+              console.log(data);
+            });
+          };
+      </script>
 </body>
 
 </html>

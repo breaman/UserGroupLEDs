@@ -7,3 +7,17 @@
 Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+<p>
+    <button onclick="returnArrayAsync()">
+        Trigger .NET static method
+    </button>
+</p>
+
+@code {
+    [JSInvokable]
+    public static Task<int[]> ReturnArrayAsync()
+    {
+        return Task.FromResult(new int[] { 1, 2, 3, 4 });
+    }
+}

@@ -6,9 +6,18 @@
 #
 name: usergroupleds
 services:
-- name: usergroupleds-web
-  project: src/UserGroupLEDs.Web/UserGroupLEDs.Web.csproj
 - name: raspberrypi-yarp
   project: src/RaspberryPi.Yarp/RaspberryPi.Yarp.csproj
+  bindings:
+  - port: 5000
+    protocol: https
 - name: usergroupleds-alexa
   project: src/UserGroupLEDs.Alexa/UserGroupLEDs.Alexa.csproj
+  bindings:
+  - port: 5001
+    protocol: https
+- name: usergroupleds-api
+  project: src/UserGroupLEDs.Api/UserGroupLEDs.Api.csproj
+  bindings:
+  - port: 5002
+    protocol: https

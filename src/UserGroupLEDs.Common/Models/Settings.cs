@@ -1,6 +1,6 @@
 using System.Drawing;
 
-namespace UserGroupLEDs.Api.Models;
+namespace UserGroupLEDs.Common.Models;
 
 public class Settings
 {

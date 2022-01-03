@@ -1,4 +1,4 @@
-namespace UserGroupLEDs.Api.Models;
+namespace UserGroupLEDs.Common.Models;
 
 public enum Pattern
 {

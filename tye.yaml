@@ -21,8 +21,3 @@ services:
   bindings:
   - port: 5002
     protocol: https
-- name: usergroupleds-web
-  project: src/UserGroupLEDs.Web/UserGroupLEDs.Web.csproj
-  bindings:
-  - port: 5003
-    protocol: https

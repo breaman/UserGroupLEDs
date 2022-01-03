@@ -7,7 +7,7 @@
 			"VARIANT": "6.0",
 			// Options
 			"INSTALL_NODE": "true",
-			"NODE_VERSION": "lts/*",
+			"NODE_VERSION": "14",
 			"INSTALL_AZURE_CLI": "false"
 		}
 	},
